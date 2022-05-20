@@ -1,1 +1,37 @@
+# Import Packages
+import numpy as np
+import pandas as pd
+import random as rnd
+
+# Read the Data
+Variable name - emp_data
+document='INX_Future_Inc_Employee_Performance_CDS_Project2_Data_V1.8.xls'
+emp_data=pd.read_excel(document)
+emp_data
+
+# List out the Columns / Features
+print(emp_data.columns.values)
+
+# Shape of the Data
+emp_data.shape
+
+# Types of Data / Features Present in the Dataset
+emp_data.info()
+
+# Distribution of Categorical and Numerical data
+emp_data.describe()
+
+# Checking for missing values - NAN and NULL values
+emp_data.isna().values.any()
+emp_data.isnull().values.any()
+
+# EDA - Exploratory Data Analysis
+# Importing Packages and Warnings for Visualisation
+import seaborn as sns
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+import warnings
+warnings.filterwarnings('ignore')
+
 
